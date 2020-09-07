@@ -27,7 +27,8 @@
             <a href="#Menu1" class="nav-tabs nav-link text-light ml-4 mr-3"><i class="ion ion-folder mr-2"></i>Archivos</a>
             <a href="#Menu2" class="nav-tabs nav-link text-light ml-4 mr-3"><i class="ion ion-person-stalker mr-2"></i>Usuarios</a>
             <a href="#Menu3" class="nav-tabs nav-link text-light ml-4 mr-3"><i class="ion ion-arrow-swap mr-2"></i>Movimientos</a>
-            <a href="#Menu4" class="nav-tabs nav-link text-light ml-4 mr-3"><i class="ion ion-upload mr-2"></i>Cargas</a>
+            <a href="#Menu4" class="nav-tabs nav-link text-light ml-4 mr-3"><i
+                        class="ion ion-upload mr-2"></i>Cargas</a>
         </div>
     </div>
     <!-- Fin sidebar -->
@@ -40,7 +41,8 @@
                     <i class="ion ion-android-menu"></i>
                 </button>
                 <div class="btn-group">
-                    <button type="button" class="btn text-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn text-light dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                         <i class="ion ion-person"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right">
@@ -108,7 +110,11 @@
                                         </label>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-submit text-light btn-lg">Enviar</button>
+                                <div class="form-row text-center">
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-submit text-light text-lg-center col-sm-12 col-md-2">Enviar</button>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
