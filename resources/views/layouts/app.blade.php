@@ -1,62 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}"></script>
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <title>Hello, world!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Diego Velázquez">
+    <meta name="description" content="Plantilla plem">
+    <title>Plantilla plem</title>
+    <link rel="shortcut icon" href="{{url('img/LXlegis.jpg')}}"/>
+    <!-- Bootstrap Css -->
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <!-- Hoja de estilos -->
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
 </head>
 <body>
-<section>
-    <div class="d-flex">
-        <div id="sidebar-container" class="bg-primary">
+<div class="d-flex" id="content-wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-container" class="bg-light border-right">
+        <div class="logo">
             <div class="text-center mt-3">
                 <img src="{{asset('img/Logoplem.png')}}" class="image align-content-center" width="80%">
                 <h5 class="text-center text-light mt-2">Nombre sistema</h5>
             </div>
-            <div class="menu">
-                <a href="#Menu1" class="nav-tabs nav-link p-1 ml-4 mr-3"><i class="ion ion-folder mr-2"></i>Archivos</a>
-                <a href="#Menu2" class="nav-tabs nav-link p-1 ml-4 mr-3"><i class="ion ion-person-stalker mr-2"></i>Usuarios</a>
-                <a href="#Menu3" class="nav-tabs nav-link p-1 ml-4 mr-3"><i class="ion ion-arrow-swap mr-2"></i>Movimientos</a>
-                <a href="#Menu4" class="nav-tabs nav-link p-1 ml-4 mr-3"><i class="ion ion-upload mr-2"></i>Cargas</a>
-            </div>
         </div>
-        <div class="ml-3 mt-2 mr-3 w-100">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#sidebar-container" aria-controls="sidebar-container" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <div class="menu list-group-flush">
+            <a href="#Menu1" class="nav-tabs nav-link text-light ml-4 mr-3"><i class="ion ion-folder mr-2"></i>Archivos</a>
+            <a href="#Menu2" class="nav-tabs nav-link text-light ml-4 mr-3"><i class="ion ion-person-stalker mr-2"></i>Usuarios</a>
+            <a href="#Menu3" class="nav-tabs nav-link text-light ml-4 mr-3"><i class="ion ion-arrow-swap mr-2"></i>Movimientos</a>
+            <a href="#Menu4" class="nav-tabs nav-link text-light ml-4 mr-3"><i class="ion ion-upload mr-2"></i>Cargas</a>
+        </div>
+    </div>
+    <!-- Fin sidebar -->
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle text-light " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false">
-                                <i class="ion ion-person"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#"><i class="ion ion-person"></i> Perfil</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"><i class="ion ion-power"></i> Cerrar sesion</a>
-                            </div>
-                        </li>
-                    </ul>
+    <!-- Page Content -->
+    <div id="page-content-wrapper" class="w-100 bg-light-blue">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom mt-2 ml-2 mr-2">
+            <div class="container">
+                <button class="btn border-light text-light" id="menu-toggle">
+                    <i class="ion ion-android-menu"></i>
+                </button>
+                <div class="btn-group">
+                    <button type="button" class="btn text-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="ion ion-person"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" type="button"><i class="ion ion-person"></i> Perfil</button>
+                        <button class="dropdown-item" type="button"><i class="ion ion-power"></i> Cerrar sesion</button>
+                    </div>
                 </div>
-            </nav>
-        </div>
-    </div>
-</section>
+            </div>
+        </nav>
 
-<div class="container">
-    <div class="card">
-        <div class="card-header">
-            <strong>Hola</strong>
+        <div id="content" class="container-fluid p-5">
+            <section class="py-3">
+                <!-- Highlights -->
+                <div class="container">
+                    <div class="card mb-5 shadow-sm border-0 shadow-hover">
+                        <div class="card-header">
+                            <h1>Formulario</h1>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4"
+                                               placeholder="Email">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Password</label>
+                                        <input type="password" class="form-control" id="inputPassword4"
+                                               placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAddress">Address</label>
+                                    <input type="text" class="form-control" id="inputAddress"
+                                           placeholder="1234 Main St">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAddress2">Address 2</label>
+                                    <input type="text" class="form-control" id="inputAddress2"
+                                           placeholder="Apartment, studio, or floor">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputCity">City</label>
+                                        <input type="text" class="form-control" id="inputCity">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="inputState">State</label>
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputZip">Zip</label>
+                                        <input type="text" class="form-control" id="inputZip">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Check me out
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-submit text-light btn-lg">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
+    <!-- Fin Page Content -->
 </div>
+<!-- Fin wrapper -->
+
+<!-- Bootstrap y JQuery -->
+<script src="{{asset('js/app.js')}}"></script>
+
+<!-- Abrir / cerrar menu -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#content-wrapper").toggleClass("toggled");
+    });
+</script>
+
 </body>
+
 </html>
